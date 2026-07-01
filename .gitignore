@@ -1,0 +1,13 @@
+node_modules
+dist
+dist-ssr
+*.local
+.DS_Store
+.env
+.env.local
+
+# raw source video (large; only the extracted frames in public/video/frames are used)
+public/video/source/
+
+# local Claude Code permission settings, not meant to be shared
+.claude/settings.local.json

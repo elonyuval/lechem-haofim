@@ -1,0 +1,14 @@
+/* 3D perspective utilities used by the Hero banner and product/category cards. */
+
+.perspective-container {
+  perspective: 1200px;
+}
+
+.tilt-card {
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+.tilt-card-inner {
+  transform: translateZ(20px);
+}
