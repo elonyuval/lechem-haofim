@@ -18,13 +18,15 @@ const FRAMES_BASE_PATH = "/video/frames/frame-";
 
 export function VideoScrollHero() {
   const containerRef = useRef<HTMLDivElement>(null);
+  const canvasRef = useRef<HTMLCanvasElement>(null);
   const prefersReducedMotion = usePrefersReducedMotion();
   const bakedGoods = categories.find((c) => c.slug === "baked-goods");
 
-  const { scrollYProgress, currentSrc } = useScrollFrameSequence({
+  const { scrollYProgress } = useScrollFrameSequence({
     frameCount: FRAME_COUNT,
     basePath: FRAMES_BASE_PATH,
     containerRef,
+    canvasRef,
   });
 
   // Beat 1 (0-32%): oven + flames + plain pizza -> brand intro text.
@@ -57,11 +59,11 @@ export function VideoScrollHero() {
   return (
     <section ref={containerRef} className="relative h-[300vh] md:h-[350vh]">
       <div className="sticky top-0 h-screen overflow-hidden bg-black">
-        <img
-          src={currentSrc}
-          alt="לחם האופים - מהטאבון אליכם"
-          className="absolute inset-0 h-full w-full object-cover"
-          draggable={false}
+        <canvas
+          ref={canvasRef}
+          role="img"
+          aria-label="לחם האופים - מהטאבון אליכם"
+          className="absolute inset-0 h-full w-full"
         />
 
         {/* Legibility gradients - the bottom one also covers the source clip's AI-tool watermark. */}
