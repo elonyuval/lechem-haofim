@@ -55,7 +55,7 @@ export function VideoScrollHero() {
           <img
             src="/images/logo-text.png"
             alt={businessInfo.businessNameHe}
-            className="mx-auto mb-4 h-16 w-auto md:h-20"
+            className="mx-auto mb-0.5 h-16 w-auto md:h-20"
           />
           <p className="mb-6 text-lg">{businessInfo.kashrut.statementHe} · מאפים טריים ישר מהתנור</p>
           {bakedGoods && (
@@ -89,10 +89,10 @@ export function VideoScrollHero() {
             alt={businessInfo.businessNameHe}
             className="mx-auto h-20 w-auto drop-shadow-lg md:h-28"
           />
-          <p className="mt-3 text-sm font-semibold tracking-wide text-crust-200">
+          <p className="mt-0.5 text-sm font-semibold tracking-wide text-crust-200">
             {businessInfo.kashrut.statementHe} · {businessInfo.address.city}
           </p>
-          <p className="mt-1 text-lg text-crust-100">ישר מהטאבון אליכם</p>
+          <p className="mt-3 text-lg text-crust-100">ישר מהטאבון אליכם</p>
         </motion.div>
 
         <motion.div
