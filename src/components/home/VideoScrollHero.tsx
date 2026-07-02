@@ -11,20 +11,25 @@ import { businessInfo } from "../../data/businessInfo";
 import { categories } from "../../data/categories";
 import { ROUTES } from "../../lib/constants";
 import { useScrollFrameSequence } from "../../hooks/useScrollFrameSequence";
-import { usePrefersReducedMotion } from "../../hooks/useMediaQuery";
+import { usePrefersReducedMotion, useIsSmallScreen } from "../../hooks/useMediaQuery";
 
 const FRAME_COUNT = 60;
-const FRAMES_BASE_PATH = "/video/frames/frame-";
+// Two separately-shot/exported sequences: a landscape framing for desktop and
+// a portrait (9:16) framing for mobile, so the subject isn't cropped oddly.
+const FRAMES_BASE_PATH_DESKTOP = "/video/frames/frame-";
+const FRAMES_BASE_PATH_MOBILE = "/video/frames-mobile/frame-";
 
 export function VideoScrollHero() {
   const containerRef = useRef<HTMLDivElement>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const prefersReducedMotion = usePrefersReducedMotion();
+  const isSmallScreen = useIsSmallScreen();
   const bakedGoods = categories.find((c) => c.slug === "baked-goods");
+  const framesBasePath = isSmallScreen ? FRAMES_BASE_PATH_MOBILE : FRAMES_BASE_PATH_DESKTOP;
 
   const { scrollYProgress } = useScrollFrameSequence({
     frameCount: FRAME_COUNT,
-    basePath: FRAMES_BASE_PATH,
+    basePath: framesBasePath,
     containerRef,
     canvasRef,
   });
@@ -41,7 +46,7 @@ export function VideoScrollHero() {
     return (
       <section className="relative flex h-[70vh] items-center justify-center overflow-hidden bg-black text-center text-white">
         <img
-          src={`${FRAMES_BASE_PATH}060.jpg`}
+          src={`${framesBasePath}060.jpg`}
           alt="לחם האופים - מאפים ישר מהתנור"
           className="absolute inset-0 h-full w-full object-cover"
         />
