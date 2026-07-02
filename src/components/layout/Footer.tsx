@@ -6,9 +6,11 @@ export function Footer() {
     <footer className="mt-16 border-t border-crust-100 bg-crust-50">
       <div className="mx-auto grid max-w-6xl gap-8 px-4 py-10 md:grid-cols-3">
         <div>
-          <h3 className="mb-3 text-lg font-bold text-crust-800">
-            {businessInfo.businessNameHe}
-          </h3>
+          <img
+            src="/images/logo.png"
+            alt={businessInfo.businessNameHe}
+            className="mb-3 h-14 w-auto"
+          />
           <p className="text-sm text-crust-600">{businessInfo.kashrut.statementHe}</p>
         </div>
 

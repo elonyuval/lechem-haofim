@@ -84,15 +84,15 @@ export function VideoScrollHero() {
           style={{ opacity: introOpacity }}
           className="absolute inset-x-0 top-1/4 px-6 text-center text-white"
         >
-          <p className="mb-3 text-sm font-semibold tracking-wide text-crust-200">
-            {businessInfo.kashrut.statementHe} · {businessInfo.address.city}
-          </p>
           <img
             src="/images/logo-text.png"
             alt={businessInfo.businessNameHe}
             className="mx-auto h-20 w-auto drop-shadow-lg md:h-28"
           />
-          <p className="mt-3 text-lg text-crust-100">ישר מהטאבון אליכם</p>
+          <p className="mt-3 text-sm font-semibold tracking-wide text-crust-200">
+            {businessInfo.kashrut.statementHe} · {businessInfo.address.city}
+          </p>
+          <p className="mt-1 text-lg text-crust-100">ישר מהטאבון אליכם</p>
         </motion.div>
 
         <motion.div
