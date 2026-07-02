@@ -52,7 +52,11 @@ export function VideoScrollHero() {
         />
         <div className="absolute inset-0 bg-black/50" />
         <div className="relative z-10 px-6">
-          <h1 className="mb-4 font-display text-4xl md:text-5xl">{businessInfo.businessNameHe}</h1>
+          <img
+            src="/images/logo-text.png"
+            alt={businessInfo.businessNameHe}
+            className="mx-auto mb-4 h-16 w-auto md:h-20"
+          />
           <p className="mb-6 text-lg">{businessInfo.kashrut.statementHe} · מאפים טריים ישר מהתנור</p>
           {bakedGoods && (
             <LinkButton to={ROUTES.menuCategory(bakedGoods.slug)}>לתפריט המאפים</LinkButton>
@@ -83,9 +87,11 @@ export function VideoScrollHero() {
           <p className="mb-3 text-sm font-semibold tracking-wide text-crust-200">
             {businessInfo.kashrut.statementHe} · {businessInfo.address.city}
           </p>
-          <h1 className="font-display text-4xl drop-shadow-lg md:text-6xl">
-            {businessInfo.businessNameHe}
-          </h1>
+          <img
+            src="/images/logo-text.png"
+            alt={businessInfo.businessNameHe}
+            className="mx-auto h-20 w-auto drop-shadow-lg md:h-28"
+          />
           <p className="mt-3 text-lg text-crust-100">ישר מהטאבון אליכם</p>
         </motion.div>
 
