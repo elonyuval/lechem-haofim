@@ -45,7 +45,7 @@ export function OrderReviewPage() {
   if (submittedOrder) {
     return (
       <section className="mx-auto max-w-2xl px-4 py-12">
-        <h1 className="mb-2 text-3xl font-extrabold text-crust-900">כמעט סיימנו!</h1>
+        <h1 className="mb-2 font-display text-3xl text-crust-900">כמעט סיימנו!</h1>
         <p className="mb-6 text-crust-600">
           הבקשה שלכם נשמרה. לחצו על אחת מהאפשרויות למטה כדי לשלוח אותה בפועל אלינו.
         </p>
@@ -60,7 +60,7 @@ export function OrderReviewPage() {
   if (selected.length === 0) {
     return (
       <section className="mx-auto max-w-2xl px-4 py-12 text-center">
-        <h1 className="mb-3 text-2xl font-extrabold text-crust-900">אין פריטים לבחירה</h1>
+        <h1 className="mb-3 font-display text-2xl text-crust-900">אין פריטים לבחירה</h1>
         <p className="mb-6 text-crust-600">גשו לתפריט ובחרו מוצרים כדי להמשיך להזמנה.</p>
         <Link to={ROUTES.menu} className="font-semibold text-crust-600 underline">
           לתפריט
@@ -71,7 +71,7 @@ export function OrderReviewPage() {
 
   return (
     <section className="mx-auto max-w-2xl px-4 py-12">
-      <h1 className="mb-6 text-3xl font-extrabold text-crust-900">סקירת ההזמנה</h1>
+      <h1 className="mb-6 font-display text-3xl text-crust-900">סקירת ההזמנה</h1>
       <div className="mb-8">
         <SelectionList />
       </div>

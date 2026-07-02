@@ -12,7 +12,7 @@ export function CallToAction() {
       className="mx-auto max-w-4xl px-4 pb-20 text-center"
     >
       <div className="rounded-3xl bg-crust-500 px-8 py-12 text-white shadow-xl shadow-crust-500/30">
-        <h2 className="mb-3 text-2xl font-extrabold md:text-3xl">מתכננים אירוע?</h2>
+        <h2 className="mb-3 font-display text-2xl md:text-3xl">מתכננים אירוע?</h2>
         <p className="mb-6 text-crust-50">
           בחרו מהתפריט המלא או מהחבילות המוכנות שלנו, ונחזור אליכם בהקדם.
         </p>

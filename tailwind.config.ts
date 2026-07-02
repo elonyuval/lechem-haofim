@@ -5,7 +5,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["Assistant", "system-ui", "sans-serif"],
+        sans: ["Rubik", "system-ui", "sans-serif"],
+        display: ["Suez One", "Rubik", "system-ui", "sans-serif"],
       },
       colors: {
         // warm bakery palette

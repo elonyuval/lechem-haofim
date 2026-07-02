@@ -13,7 +13,7 @@ export function MenuPage() {
 
   return (
     <section className="mx-auto max-w-6xl px-4 py-12">
-      <h1 className="mb-2 text-3xl font-extrabold text-crust-900">הזמנות אונליין</h1>
+      <h1 className="mb-2 font-display text-3xl text-crust-900">הזמנות אונליין</h1>
       <p className="mb-6 text-crust-600">בחרו קטגוריה, הוסיפו מוצרים לבחירה, ונשלח את הבקשה בסוף.</p>
       <div className="mb-8">
         <CategoryTabs value={activeSlug} onChange={(slug) => navigate(ROUTES.menuCategory(slug))} />

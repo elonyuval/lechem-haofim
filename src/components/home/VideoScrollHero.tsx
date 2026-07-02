@@ -47,7 +47,7 @@ export function VideoScrollHero() {
         />
         <div className="absolute inset-0 bg-black/50" />
         <div className="relative z-10 px-6">
-          <h1 className="mb-4 text-4xl font-extrabold md:text-5xl">{businessInfo.businessNameHe}</h1>
+          <h1 className="mb-4 font-display text-4xl md:text-5xl">{businessInfo.businessNameHe}</h1>
           <p className="mb-6 text-lg">{businessInfo.kashrut.statementHe} · מאפים טריים ישר מהתנור</p>
           {bakedGoods && (
             <LinkButton to={ROUTES.menuCategory(bakedGoods.slug)}>לתפריט המאפים</LinkButton>
@@ -78,7 +78,7 @@ export function VideoScrollHero() {
           <p className="mb-3 text-sm font-semibold tracking-wide text-crust-200">
             {businessInfo.kashrut.statementHe} · {businessInfo.address.city}
           </p>
-          <h1 className="text-4xl font-extrabold drop-shadow-lg md:text-6xl">
+          <h1 className="font-display text-4xl drop-shadow-lg md:text-6xl">
             {businessInfo.businessNameHe}
           </h1>
           <p className="mt-3 text-lg text-crust-100">ישר מהטאבון אליכם</p>
@@ -88,7 +88,7 @@ export function VideoScrollHero() {
           style={{ opacity: transformOpacity }}
           className="absolute inset-x-0 top-1/2 -translate-y-1/2 px-6 text-center text-white"
         >
-          <h2 className="text-3xl font-extrabold drop-shadow-lg md:text-5xl">
+          <h2 className="font-display text-3xl drop-shadow-lg md:text-5xl">
             כל מאפה שאתם אוהבים,
             <br />
             יוצא מאותו תנור
@@ -99,7 +99,7 @@ export function VideoScrollHero() {
           style={{ opacity: finalOpacity }}
           className="absolute inset-x-0 bottom-16 px-6 text-center text-white md:bottom-20"
         >
-          <h2 className="mb-4 text-3xl font-extrabold drop-shadow-lg md:text-4xl">
+          <h2 className="mb-4 font-display text-3xl drop-shadow-lg md:text-4xl">
             מאפים טריים, ישר מהתנור
           </h2>
           {bakedGoods && (

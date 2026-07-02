@@ -7,7 +7,7 @@ import { ROUTES } from "../../lib/constants";
 export function CategoryHighlights() {
   return (
     <section className="mx-auto max-w-6xl px-4 py-16">
-      <h2 className="mb-8 text-center text-3xl font-extrabold text-crust-900">
+      <h2 className="mb-8 text-center font-display text-3xl text-crust-900">
         הקטגוריות שלנו
       </h2>
       <div className="grid grid-cols-2 gap-5 md:grid-cols-3">
