@@ -20,8 +20,12 @@ export function Header() {
   return (
     <header className="sticky top-0 z-40 border-b border-crust-100 bg-white/90 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
-        <NavLink to={ROUTES.home} className="font-display text-xl text-crust-700">
-          {businessInfo.businessNameHe}
+        <NavLink to={ROUTES.home} className="shrink-0">
+          <img
+            src="/images/logo.png"
+            alt={businessInfo.businessNameHe}
+            className="h-12 w-auto"
+          />
         </NavLink>
 
         <nav className="hidden items-center gap-1 md:flex">

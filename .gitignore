@@ -9,5 +9,8 @@ dist-ssr
 # raw source video (large; only the extracted frames in public/video/frames are used)
 public/video/source/
 
+# raw uploaded images (large originals; only processed files like logo.png are used)
+public/images/source/
+
 # local Claude Code permission settings, not meant to be shared
 .claude/settings.local.json
