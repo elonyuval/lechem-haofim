@@ -1,8 +1,8 @@
 // The opening "story" sequence: an AI-generated clip (oven -> pizza -> croissant
 // -> savory pastry) exported as a frame sequence and scrubbed by scroll
-// position. Two real beats carry text: an intro brand moment, and a closing
-// moment tied to the real "baked goods" category (the closest real category
-// to what the final frames show).
+// position. Three beats carry text: an intro brand moment, a mid-transform
+// variety line, and a closing moment tied to the real "baked goods" category
+// (the closest real category to what the final frames show).
 
 import { useRef } from "react";
 import { motion, useTransform } from "framer-motion";
@@ -31,8 +31,9 @@ export function VideoScrollHero() {
 
   // Beat 1 (0-32%): oven + flames + plain pizza -> brand intro text.
   const introOpacity = useTransform(scrollYProgress, [0, 0.2, 0.32], [1, 1, 0]);
-  // 32-72%: the pizza-to-pastry transformation itself, left to breathe with no text.
-  // Beat 2 (72-100%): final pastry revealed -> real "baked goods" CTA.
+  // Beat 2 (36-68%): the transformation itself -> a line about variety, one oven.
+  const transformOpacity = useTransform(scrollYProgress, [0.36, 0.44, 0.6, 0.68], [0, 1, 1, 0]);
+  // Beat 3 (72-100%): final pastry revealed -> real "baked goods" CTA.
   const finalOpacity = useTransform(scrollYProgress, [0.72, 0.85, 1], [0, 1, 1]);
   const scrollHintOpacity = useTransform(scrollYProgress, [0, 0.08], [1, 0]);
 
@@ -81,6 +82,17 @@ export function VideoScrollHero() {
             {businessInfo.businessNameHe}
           </h1>
           <p className="mt-3 text-lg text-crust-100">ישר מהטאבון אליכם</p>
+        </motion.div>
+
+        <motion.div
+          style={{ opacity: transformOpacity }}
+          className="absolute inset-x-0 top-1/2 -translate-y-1/2 px-6 text-center text-white"
+        >
+          <h2 className="text-3xl font-extrabold drop-shadow-lg md:text-5xl">
+            כל מאפה שאתם אוהבים,
+            <br />
+            יוצא מאותו תנור
+          </h2>
         </motion.div>
 
         <motion.div
